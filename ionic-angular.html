@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ionic and Angular</title>
+
+		<meta name="Part 1 of Ionic Primer">
+		<meta name="author" content="Froilan Miranda">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized-light.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+			
+				<section><!------------------------------------slide---------------------------------------------->
+					<h1>Ionic and Angular</h1>
+					<h3>Ionic – Powered by AngularJS</h3>
+					<p>
+						<small>Created by <a href="http://www.zipcoder.io">Froilan Miranda</a></small>
+					</p>
+				</section>
+
+			
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>Ionic and Angular</h2>
+						<p>
+							Ionic is one of the most widely used mobile hybrid frameworks.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Ionic and Angular</h2>
+						<p>
+							Ionic is built on top of AngularJS, a super heroic framework for building MVW apps.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Understanding the separation of concerns</h2>
+						<p>
+							With the extensive growth of asynchronous and highly interactive web pages, the user experience can be made better with client-side driven applications than server-side driven applications.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Understanding the separation of concerns</h2>
+						<p>
+							In a typical MVC architecture, a model is an entity where you save the data, and a controller is where you massage the data before you display it on a view.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Understanding the separation of concerns</h2>
+						<p>
+							Unlike the server-side MVC, the client-side MVC has an extra component named the router. A router is typically a URL of the web page that dictates which model/view/controller should be loaded.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Understanding the separation of concerns</h2>
+						<p>
+							This is the basic idea behind AngularJS, and how it achieves separation of concerns and at the same time provides a single-page application architecture.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>AngularJS components</h2>
+						<p>
+							AngularJS is driven from HTML, unlike most client-side JavaScript frameworks.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>AngularJS components</h2>
+						<pre><code data-trim>
+<html ng-app="">
+<head>
+   <script src="angular.min.js" type="text/JavaScript"></script>
+</head>
+<body>
+   <h1>Login Form</h1>
+   <form name="form" method="POST" action="/authenticate">
+         <label>Email Address</label>
+         <input type="email" name="email" ng-model="email" required> 
+ 
+
+         <label>Password</label>
+         <input type="password" name="password" ng-model="password" required> 
+
+         <input type="submit" ng-disabled="!email || !password" value="Login">
+   </form>
+</body>
+</html>
+						</code></pre>
+						<p>
+							In the preceding code snippet, the attributes that start with ng- are called as AngularJS directives.
+						</p>
+						<p>
+							Here, the ng-disabled directive takes care of adding the disabled attribute to the Submit button when the e-mail or password is not valid.
+						</p>
+
+					</section>
+
+					<section data-transition="concave">
+						<h2>AngularJS components</h2>
+						<p>
+							Dependency Injection (DI) takes care of injecting units of code where required. It is one of the key enablers that help us achieve separation of concerns.
+						</p>
+					</section>
+
+
+					<section data-transition="concave">
+						<h2>AngularJS components</h2>
+						<p>
+							<ul>
+							<li>HTML—Views</li>
+
+    						<li>AngularJS controllers—Controllers</li>
+
+    						<li>Scope objects—Model</li>
+    						</ul>
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>AngularJS directives</h2>
+						<p>
+							<ul>
+							<li>     ng-app: This initializes a new default AngularJS module when no value is passed to it; otherwise, it initializes the named module</li>
+
+    <li> ng-model: This maps the input element's value to the current scope</li>
+
+    <li> ng-show: This shows the DOM element when the expression passed to ng-show is true</li>
+
+    <li> ng-hide: This hides the DOM element when the expression passed to ng-hide is true</li>
+
+    <li> ng-repeat: This iterates the current tag and all its children based on the expression passed to ng-repeat </li>
+    						</ul>
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>AngularJS services</h2>
+						<p>
+							AngularJS services are substitutable objects that can be injected into directives and controllers via Dependency Injection. These objects consist of simple pieces of business logic that can be used across the app.
+						</p>
+						
+					</section>
+
+					<section data-transition="concave">
+						<h2>AngularJS services</h2>
+						<p>
+							AngularJS services are lazily initialized only when a component depends on them. 
+						</p>
+						<p>
+						The $interval is another service that is available in AngularJS. The $interval is the same as setTimeInterval(). It wraps setTimeInterval() and returns a promise when you register this service. This promise then can be used to destroy $interval later on.</p>
+						
+					</section>
+
+				</section>
+
+			</div><!-- slides -->
+		</div><!-- reveal -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom/cube
+
+				leap: {
+					naturalSwipe   : false,    // Invert swipe gestures
+					pointerOpacity : 0.5,      // Set pointer opacity to 0.5
+					pointerColor   : '#d80000' // Red pointer
+				},
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'plugin/leap/leap.js', async: true },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

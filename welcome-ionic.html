@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Welcome to Ionic</title>
+
+		<meta name="Introduction to Ionic">
+		<meta name="author" content="Froilan Miranda">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized-light.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+			
+				<section><!------------------------------------slide---------------------------------------------->
+					<h1>Ionic</h1>
+					<h3>Welcome to Ionic</h3>
+					<p>
+						<small>Created by <a href="http://www.zipcoder.io">Froilan Miranda</a></small>
+					</p>
+				</section>
+
+			
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>Mobile Hybrid Architecture</h2>
+						<p>
+							Almost every mobile operating system (also called Platform when working with Cordova) has an API to develop apps.
+						</p>
+						<p>
+							This API consists of a component named Web View.
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Mobile Hybrid Architecture</h2>
+						<p>
+							You can use the same knowledge of web development to build native-hybrid mobile apps
+						</p>
+						<ul>
+							<li>Android uses Android Application Package (.apk)</li>
+
+							<li>iOS uses iPhone Application Archive (.ipa)</li>
+
+							<li>Windows Phone uses Application Package (.xap)</li>
+						</ul>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Mobile Hybrid Architecture</h2>
+						<p>
+							This setup of showing a web page inside the mobile app container that consists of your application business logic is called as a Hybrid App.
+						</p>
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>Apache Cordova</h2>
+						<p>
+							Cordova is the piece of software that stitches the web application and the native application together
+						</p>
+						<p><i>"Apache Cordova is a platform for building native mobile applications using HTML, CSS and JavaScript."</i></p>
+					</section>
+					
+					<section data-transition="concave">
+						<h2>Apache Cordova</h2>
+						<p>
+							Apache Cordova also provides a set of APIs written in JavaScript to interact with the native features of the device
+						</p>
+					</section>
+					
+					<section data-transition="concave">
+						<h2>Apache Cordova</h2>
+						<p>
+							Cordova has a bunch of APIs that interface with the web view using JavaScript and then talk to the device in its native language (for example, Java for Android), thus providing a bridge between them
+						</p>
+					</section>
+					
+					<section data-transition="concave">
+						<h2>Apache Cordova</h2>
+						<p>
+							To know more from the JavaScript about the device in which your app is running, write the following code inside the JS file:
+							<pre><code data-trim>
+var platform = device.platform;
+							</code></pre>
+
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Apache Cordova</h2>
+						<p>
+							To access the UUID, model, OS version, and the Cordova version of the device from inside the web view using JavaScript
+							<pre><code data-trim>
+var uuid = device.uuid;
+var model = device.model;
+var version = device.version;
+var Cordova = device.Cordova;
+							</code></pre>
+						</p>
+					</section>
+					
+					<section data-transition="concave">
+						<h2>Apache Cordova</h2>
+						<p>
+							Cordova does not convert the HTML, CSS, and JS code to an OS-specific binary code. All it does is wrap the HTML, CSS, and JS code and execute it inside a web view.
+						</p>
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>What is Ionic?</h2>
+						<p>
+							Ionic is an open source, front-end SDK for developing hybrid mobile apps with HTML5
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>What is Ionic?</h2>
+						<p>
+							With the power of AngularJS inside a framework like Ionic, the possibilities are unlimited (you can use any AngularJS component inside Ionic as long as it makes sense in a mobile app)
+						</p>
+					</section>
+
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+					<section>
+						<h2>Setup</h2>
+						<h3>Node.js</h3>
+						<p>
+							Ionic uses Node.js for its CLI as well as for the build tasks            
+						</p>
+							<pre><code data-trim>
+node -v
+							</code></pre>
+							<pre><code data-trim>
+npm -v
+							</code></pre>
+					</section>
+
+					<section>
+						<h2>Setup</h2>
+						<h3>GIT</h3>
+						<p>
+							The package manager named Bower,uses Git to download the required libraries
+						</p>
+							<pre><code data-trim>
+git --version
+							</code></pre>
+					</section>
+
+					<section>
+						<h2>Setup</h2>
+						<h3>Bower</h3>
+						<p>
+							Bower is used to manage our application library dependencies
+						</p>
+						<pre><code data-trim>
+bower -v
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Setup</h2>
+						<h3>Gulp</h3>
+						<p>
+							A build system that is developed on top of Node.js, automating a lot of monotonous, tedious tasks
+						</p>
+						<p>
+							to minify the CSS, JS, and HTML, optimize the images for the Web, and push the code to your production environment
+						</p>
+						<pre><code data-trim>
+gulp -v
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Setup</h2>
+						<h3>Cordova and Ionic CLI</h3>
+						<p>
+							Ionic CLI is a wrapper around the Cordova CLI 
+						</p>
+						<pre><code data-trim>
+cordova –v
+
+ionic –v
+						</code></pre>
+					</section>
+					<section>
+						<h2>Setup</h2>
+						<h3>Run Ionic CLI</h3>
+						<pre><code data-trim>
+ionic
+						</code></pre>
+
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>Platform</h2>
+						<p>
+							Cordova takes HTML, CSS, and JS code as input and generates a platform-specific installer, you need to have the build environments available on your machine
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Supported Platforms</h2>
+						<p>
+							<ul>
+								<li>Android</li>
+								<li>BlackBerry 10</li>
+								<li>iOS</li>
+								<li>Ubuntu</li>
+								<li>Windows Phone 8</li>
+								<li>Windows</li>
+							<ul>
+						</p>
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>Hello Ionic</h2>
+						<p>
+							Ionic has three main/go-to templates using which we can quickly start developing apps:
+							<ul>
+								<li><b>Blank:</b> This is a blank Ionic project with one page</li>
+								<li><b>Tabs:</b> This is a sample app that is built using Ionic tabs</li>
+								<li><b>Side menu:</b> This is a sample app that is built to consume side menu driven navigation</li>
+							</ul>
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Hello Ionic</h2>
+						<pre><code data-trim>
+ionic start -a "Example 1" -i app.example.one example1 blank
+						</code></pre>
+						<p>
+							<ul>
+								<li><code>-a "Example 1"</code>: This is the human-readable name of the app</li>
+								<li><code>–i app.example.one</code>: This is the app ID/reverse domain name</li>
+								<li><code>example1</code>: This is the name of the folder</li>
+								<li><code>blank</code>: This is the name of the template</li>
+							</ul>
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Hello Ionic</h2>
+						<p>
+							cd command into the new folder and run the following:
+						</p>
+						<pre><code data-trim>
+ionic serve
+						</code></pre>
+						<p>
+							This will start a new dev server on port 8100, and then launch the app in your default browser. If the port is occupied you can specify the port number
+						</p>
+						<pre><code data-trim>
+ionic serve -p 8200
+						</code></pre>
+
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+					<section data-transition="concave">
+						<h2>Browser developer tools</h2>
+						<h3>Google Chrome</h3>
+						<p>
+							Open the developer tools by pressing Cmd + Opt + I 
+						</p>
+					</section>
+
+					<section data-transition="concave">
+						<h2>Browser developer tools</h2>
+						<h3>Mozilla Firefox</h3>
+						<p>
+							Open developer tools by pressing Cmd + Opt + I
+						</p>
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+				     		bower.json: This consists of the dependencies loaded via Bower. In future, we will install other Bower packages to be used along with our app. All the information regarding the same will be available here.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+							config.xml: This file consists of all the meta information needed by Cordova while converting your Ionic app to a platform-specific installer. If you open config.xml, you will see a bunch of XML tags that describes your project. We will take a look at this file in detail again.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+							gulpfile.js: This file consists of the build tasks that we would be using while developing the Ionic app.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+							ionic.project: This file consists of the information regarding the Ionic app.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+							hooks: This folder consists of scripts that get executed when a particular Cordova task is performed.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+							plugins: This folder consists of all the plugins added to the project. We will be adding a few more plugins later on, and you can see them reflected here.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>
+							scss: This folder consists of the base scss file which we will be overwriting to customize the styles of the Ionic components.
+				     	</p>
+				     </section>
+
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+				     	<p>www: This folder consists of the Ionic code. Anything you write inside this folder is intended to land inside the web view. This is where we will be spending most of our time.
+				     	</p>
+				     </section>
+				     
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+						<h3>The config.xml file</h3>
+				     	<p>This file consists of all the information needed by Cordova to convert the code in the www folder to the platform-specific installer.
+				     	</p>
+				     	<p>There are two types of configurations that you can add to this file. One is global, that is, common to all devices, and the other is specific to the platform.</p>
+				     </section>
+				     
+				    <section data-transition="concave">
+						<h2>Project Structure</h2>
+						<h3>The www folder</h3>
+				     	<p>This folder consists of our Ionic app, the HTML, CSS, and JS codes
+				     	</p>
+				     	<p>There are two types of configurations that you can add to this file. One is global, that is, common to all devices, and the other is specific to the platform.</p>
+				     </section>
+				     
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+				    <section data-transition="concave">
+						<h2>Scaffolding the tabs template</h2>
+				     	<p>This folder consists of our Ionic app, the HTML, CSS, and JS codes
+				     	</p>
+				     	<pre><code>
+ionic start -a "Example 2" -i app.example.two example2 tabs
+						</code></pre>
+				     	<p>Enter the newly created folder and execute:</p>
+				     	<pre><code>
+ionic serve
+						</code></pre>
+				    </section>
+
+				    <section data-transition="concave">
+						<h2>Scaffolding the tabs template</h2>
+				     	<p>A new folder named templates is created. This folder will consist of partial pages associated with each AngularJS route</p>
+				     	<p>The js folder also has new files:
+				     		<ul>
+				     		    <li>controller.js: This consists of the AngularJS controller code</li>
+    							<li>services.js: This consists of the AngularJS service code</li>
+    						</ul>
+				     </section>
+				     
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+				    <section data-transition="concave">
+						<h2>Scaffolding the side menu template</h2>
+						<pre><code>
+ionic start -a "Example 3" -i app.example.three example3 sidemenu
+						</code></pre>
+						<p>Enter the newly created folder and execute:</p>
+					     <pre><code>
+ionic serve
+						</code></pre>
+					</section>
+
+				    <section data-transition="concave">
+						<h2>Scaffolding the side menu template</h2>
+						<p>run Ionic start -l to view the list of available templates</p>
+					</section>
+				</section>
+
+				<section><!------------------------------------slide---------------------------------------------->
+				    <section data-transition="concave">
+						<h2>generator-ionic</h2>
+						<p>The generator-ionic is a Yeoman generator that is used to scaffold Ionic projects.Yeoman is a scaffolding tool that uses Grunt, Bower, and Yo to scaffold apps</p>
+					</section>
+				    <section data-transition="concave">
+						<h2>generator-ionic</h2>
+						<p>Ionic has its own CLI to scaffold apps. But for other frameworks, which do not have a generator, Yeoman provides base generators.</p>
+					</section>				    
+					<section data-transition="concave">
+						<h2>generator-ionic</h2>
+						<h3>Installing generator-ionic</h3>
+						<p>generator-ionic, we need to install yo, grunt, and grunt-cli globally</p>
+						<pre><code>
+npm install yo grunt grunt-cli -g
+						</code></pre>
+					</section>
+					<section data-transition="concave">
+						<h2>generator-ionic</h2>
+						<h3>Installing generator-ionic</h3>
+						<p>Create a new folder and within that folder run</p>
+						<pre><code>
+yo ionic example
+						</code></pre>
+					</section>
+
+					<section data-transition="concave">
+						<h2>generator-ionic</h2>
+						<h3>Installing generator-ionic</h3>
+						<p>serve the scaffolded app by running the following command:</p>
+						<pre><code>
+grunt serve
+						</code></pre>
+					</section>
+
+				</section>
+
+			</div><!-- slides -->
+		</div><!-- reveal -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom/cube
+
+				leap: {
+					naturalSwipe   : false,    // Invert swipe gestures
+					pointerOpacity : 0.5,      // Set pointer opacity to 0.5
+					pointerColor   : '#d80000' // Red pointer
+				},
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'plugin/leap/leap.js', async: true },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
