@@ -39,7 +39,7 @@
 		<div class="reveal">
 			<div class="slides">
 
-			
+
 				<section><!------------------------------------slide---------------------------------------------->
 					<h1>Ionic</h1>
 					<h3>Welcome to Ionic</h3>
@@ -48,7 +48,7 @@
 					</p>
 				</section>
 
-			
+
 				<section><!------------------------------------slide---------------------------------------------->
 					<section data-transition="concave">
 						<h2>Mobile Hybrid Architecture</h2>
@@ -90,21 +90,21 @@
 						</p>
 						<p><i>"Apache Cordova is a platform for building native mobile applications using HTML, CSS and JavaScript."</i></p>
 					</section>
-					
+
 					<section data-transition="concave">
 						<h2>Apache Cordova</h2>
 						<p>
 							Apache Cordova also provides a set of APIs written in JavaScript to interact with the native features of the device
 						</p>
 					</section>
-					
+
 					<section data-transition="concave">
 						<h2>Apache Cordova</h2>
 						<p>
 							Cordova has a bunch of APIs that interface with the web view using JavaScript and then talk to the device in its native language (for example, Java for Android), thus providing a bridge between them
 						</p>
 					</section>
-					
+
 					<section data-transition="concave">
 						<h2>Apache Cordova</h2>
 						<p>
@@ -128,7 +128,7 @@ var Cordova = device.Cordova;
 							</code></pre>
 						</p>
 					</section>
-					
+
 					<section data-transition="concave">
 						<h2>Apache Cordova</h2>
 						<p>
@@ -159,7 +159,7 @@ var Cordova = device.Cordova;
 						<h2>Setup</h2>
 						<h3>Node.js</h3>
 						<p>
-							Ionic uses Node.js for its CLI as well as for the build tasks            
+							Ionic uses Node.js for its CLI as well as for the build tasks
 						</p>
 							<pre><code data-trim>
 node -v
@@ -209,7 +209,7 @@ gulp -v
 						<h2>Setup</h2>
 						<h3>Cordova and Ionic CLI</h3>
 						<p>
-							Ionic CLI is a wrapper around the Cordova CLI 
+							Ionic CLI is a wrapper around the Cordova CLI
 						</p>
 						<pre><code data-trim>
 cordova –v
@@ -301,7 +301,7 @@ ionic serve -p 8200
 						<h2>Browser developer tools</h2>
 						<h3>Google Chrome</h3>
 						<p>
-							Open the developer tools by pressing Cmd + Opt + I 
+							Open the developer tools by pressing Cmd + Opt + I
 						</p>
 					</section>
 
@@ -369,7 +369,7 @@ ionic serve -p 8200
 				     	<p>www: This folder consists of the Ionic code. Anything you write inside this folder is intended to land inside the web view. This is where we will be spending most of our time.
 				     	</p>
 				     </section>
-				     
+
 				    <section data-transition="concave">
 						<h2>Project Structure</h2>
 						<h3>The config.xml file</h3>
@@ -377,7 +377,7 @@ ionic serve -p 8200
 				     	</p>
 				     	<p>There are two types of configurations that you can add to this file. One is global, that is, common to all devices, and the other is specific to the platform.</p>
 				     </section>
-				     
+
 				    <section data-transition="concave">
 						<h2>Project Structure</h2>
 						<h3>The www folder</h3>
@@ -385,7 +385,7 @@ ionic serve -p 8200
 				     	</p>
 				     	<p>There are two types of configurations that you can add to this file. One is global, that is, common to all devices, and the other is specific to the platform.</p>
 				     </section>
-				     
+
 				</section>
 
 				<section><!------------------------------------slide---------------------------------------------->
@@ -411,7 +411,7 @@ ionic serve
     							<li>services.js: This consists of the AngularJS service code</li>
     						</ul>
 				     </section>
-				     
+
 				</section>
 
 				<section><!------------------------------------slide---------------------------------------------->
@@ -433,37 +433,23 @@ ionic serve
 				</section>
 
 				<section><!------------------------------------slide---------------------------------------------->
-				    <section data-transition="concave">
-						<h2>generator-ionic</h2>
-						<p>The generator-ionic is a Yeoman generator that is used to scaffold Ionic projects.Yeoman is a scaffolding tool that uses Grunt, Bower, and Yo to scaffold apps</p>
-					</section>
-				    <section data-transition="concave">
-						<h2>generator-ionic</h2>
-						<p>Ionic has its own CLI to scaffold apps. But for other frameworks, which do not have a generator, Yeoman provides base generators.</p>
-					</section>				    
 					<section data-transition="concave">
-						<h2>generator-ionic</h2>
-						<h3>Installing generator-ionic</h3>
-						<p>generator-ionic, we need to install yo, grunt, and grunt-cli globally</p>
+						<h2>Importing Template URLs</h2>
+						<p>If you want to, instead of typing the name of the template, like, say, sideMenu, you can give it the URL to the GitHub page</p>
+					</section>
+					<section data-transition="concave">
+						<h2>Importing Template URLs</h2>
+						<p>The Ionic start command works by passing it along just a GitHub address instead of a named template.</p>
+						<p>And the named template are actually GitHub shortcuts.</p>
+					</section>
+					<section data-transition="concave">
+						<h2>Importing Template URLs</h2>
 						<pre><code>
-npm install yo grunt grunt-cli -g
+ionic start someProject sidemenu
 						</code></pre>
-					</section>
-					<section data-transition="concave">
-						<h2>generator-ionic</h2>
-						<h3>Installing generator-ionic</h3>
-						<p>Create a new folder and within that folder run</p>
+						<p>Is the same as:
 						<pre><code>
-yo ionic example
-						</code></pre>
-					</section>
-
-					<section data-transition="concave">
-						<h2>generator-ionic</h2>
-						<h3>Installing generator-ionic</h3>
-						<p>serve the scaffolded app by running the following command:</p>
-						<pre><code>
-grunt serve
+ionic start someProject https://github.com/driftyco/ionic-starter-sidemenu
 						</code></pre>
 					</section>
 
